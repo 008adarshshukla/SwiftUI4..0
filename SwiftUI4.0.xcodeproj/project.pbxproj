@@ -12,6 +12,7 @@
 		026BD18229322EF900664821 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 026BD18129322EF900664821 /* Assets.xcassets */; };
 		026BD18529322EF900664821 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 026BD18429322EF900664821 /* Preview Assets.xcassets */; };
 		026BD18C29322F2A00664821 /* Charts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026BD18B29322F2A00664821 /* Charts.swift */; };
+		02BBCEC7293A425700AECE0D /* NavigationStackBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBCEC6293A425700AECE0D /* NavigationStackBootcamp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		026BD18129322EF900664821 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		026BD18429322EF900664821 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		026BD18B29322F2A00664821 /* Charts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Charts.swift; sourceTree = "<group>"; };
+		02BBCEC6293A425700AECE0D /* NavigationStackBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackBootcamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				026BD17D29322EF700664821 /* SwiftUI4_0App.swift */,
 				026BD17F29322EF700664821 /* ContentView.swift */,
 				026BD18B29322F2A00664821 /* Charts.swift */,
+				02BBCEC6293A425700AECE0D /* NavigationStackBootcamp.swift */,
 				026BD18129322EF900664821 /* Assets.xcassets */,
 				026BD18329322EF900664821 /* Preview Content */,
 			);
@@ -142,6 +145,7 @@
 			files = (
 				026BD18C29322F2A00664821 /* Charts.swift in Sources */,
 				026BD18029322EF700664821 /* ContentView.swift in Sources */,
+				02BBCEC7293A425700AECE0D /* NavigationStackBootcamp.swift in Sources */,
 				026BD17E29322EF700664821 /* SwiftUI4_0App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
