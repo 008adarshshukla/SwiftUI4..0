@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02104D05293F0DD30027BDEF /* NavigationStack2Bootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02104D04293F0DD30027BDEF /* NavigationStack2Bootcamp.swift */; };
+		02104D07293F17370027BDEF /* NavigationStackBootcamp3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02104D06293F17370027BDEF /* NavigationStackBootcamp3.swift */; };
 		026BD17E29322EF700664821 /* SwiftUI4_0App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026BD17D29322EF700664821 /* SwiftUI4_0App.swift */; };
 		026BD18029322EF700664821 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026BD17F29322EF700664821 /* ContentView.swift */; };
 		026BD18229322EF900664821 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 026BD18129322EF900664821 /* Assets.xcassets */; };
 		026BD18529322EF900664821 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 026BD18429322EF900664821 /* Preview Assets.xcassets */; };
 		026BD18C29322F2A00664821 /* Charts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026BD18B29322F2A00664821 /* Charts.swift */; };
 		02BBCEC7293A425700AECE0D /* NavigationStackBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBCEC6293A425700AECE0D /* NavigationStackBootcamp.swift */; };
+		02BF3BCE293DE24600C506DB /* otp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BF3BCD293DE24600C506DB /* otp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02104D04293F0DD30027BDEF /* NavigationStack2Bootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStack2Bootcamp.swift; sourceTree = "<group>"; };
+		02104D06293F17370027BDEF /* NavigationStackBootcamp3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackBootcamp3.swift; sourceTree = "<group>"; };
 		026BD17A29322EF700664821 /* SwiftUI4.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI4.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		026BD17D29322EF700664821 /* SwiftUI4_0App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI4_0App.swift; sourceTree = "<group>"; };
 		026BD17F29322EF700664821 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -23,6 +28,7 @@
 		026BD18429322EF900664821 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		026BD18B29322F2A00664821 /* Charts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Charts.swift; sourceTree = "<group>"; };
 		02BBCEC6293A425700AECE0D /* NavigationStackBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackBootcamp.swift; sourceTree = "<group>"; };
+		02BF3BCD293DE24600C506DB /* otp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = otp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +63,11 @@
 			children = (
 				026BD17D29322EF700664821 /* SwiftUI4_0App.swift */,
 				026BD17F29322EF700664821 /* ContentView.swift */,
+				02BF3BCD293DE24600C506DB /* otp.swift */,
 				026BD18B29322F2A00664821 /* Charts.swift */,
 				02BBCEC6293A425700AECE0D /* NavigationStackBootcamp.swift */,
+				02104D04293F0DD30027BDEF /* NavigationStack2Bootcamp.swift */,
+				02104D06293F17370027BDEF /* NavigationStackBootcamp3.swift */,
 				026BD18129322EF900664821 /* Assets.xcassets */,
 				026BD18329322EF900664821 /* Preview Content */,
 			);
@@ -144,8 +153,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				026BD18C29322F2A00664821 /* Charts.swift in Sources */,
+				02BF3BCE293DE24600C506DB /* otp.swift in Sources */,
+				02104D05293F0DD30027BDEF /* NavigationStack2Bootcamp.swift in Sources */,
 				026BD18029322EF700664821 /* ContentView.swift in Sources */,
 				02BBCEC7293A425700AECE0D /* NavigationStackBootcamp.swift in Sources */,
+				02104D07293F17370027BDEF /* NavigationStackBootcamp3.swift in Sources */,
 				026BD17E29322EF700664821 /* SwiftUI4_0App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
