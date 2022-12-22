@@ -16,6 +16,7 @@
 		026BD18C29322F2A00664821 /* Charts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026BD18B29322F2A00664821 /* Charts.swift */; };
 		02BBCEC7293A425700AECE0D /* NavigationStackBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBCEC6293A425700AECE0D /* NavigationStackBootcamp.swift */; };
 		02BF3BCE293DE24600C506DB /* otp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BF3BCD293DE24600C506DB /* otp.swift */; };
+		02CF3CF92954CD4D006E93EA /* NavigationStackBootcamp4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CF3CF82954CD4D006E93EA /* NavigationStackBootcamp4.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		026BD18B29322F2A00664821 /* Charts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Charts.swift; sourceTree = "<group>"; };
 		02BBCEC6293A425700AECE0D /* NavigationStackBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackBootcamp.swift; sourceTree = "<group>"; };
 		02BF3BCD293DE24600C506DB /* otp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = otp.swift; sourceTree = "<group>"; };
+		02CF3CF82954CD4D006E93EA /* NavigationStackBootcamp4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackBootcamp4.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				02BBCEC6293A425700AECE0D /* NavigationStackBootcamp.swift */,
 				02104D04293F0DD30027BDEF /* NavigationStack2Bootcamp.swift */,
 				02104D06293F17370027BDEF /* NavigationStackBootcamp3.swift */,
+				02CF3CF82954CD4D006E93EA /* NavigationStackBootcamp4.swift */,
 				026BD18129322EF900664821 /* Assets.xcassets */,
 				026BD18329322EF900664821 /* Preview Content */,
 			);
@@ -152,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02CF3CF92954CD4D006E93EA /* NavigationStackBootcamp4.swift in Sources */,
 				026BD18C29322F2A00664821 /* Charts.swift in Sources */,
 				02BF3BCE293DE24600C506DB /* otp.swift in Sources */,
 				02104D05293F0DD30027BDEF /* NavigationStack2Bootcamp.swift in Sources */,
