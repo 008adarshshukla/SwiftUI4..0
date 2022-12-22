@@ -1,42 +1,36 @@
-//
-//  otp.swift
-//  SwiftUI4.0
-//
-//  Created by Adarsh Shukla on 05/12/22.
-//
-
-//
-//  EnterOTP.swift
-//  Vasukam
-//
-//  Created by Adarsh Shukla on 05/12/22.
-//
-
 import SwiftUI
 
 struct EnterOTP: View {
     
+    @Environment(\.dismiss) private var dismiss
+    //@State var viewModel = ViewModel()
+    @State var otpString: String = ""
+    var characterLimit = 6
+    
     var body: some View {
-        NavigationStack {
-            GeometryReader { geometry in
-                ScrollView {
-                    VStack {
-                        upperView()
-                        Spacer()
-                        lowerView()
-                    }
-                    .padding(.horizontal, 25)
-                    .toolbar {
-                        ToolbarItem(placement: .navigationBarLeading) {
-                            Image(systemName: "chevron.left")
-                                .font(.custom("Poppins-Bold", size: 25))
-                        }
-                    }
-                    .frame(minHeight: geometry.size.height)
+        GeometryReader { geometry in
+            ScrollView {
+                VStack {
+                    upperView()
+                    Spacer()
+                    lowerView()
                 }
-                .scrollDisabled(true)
-                .frame(width: geometry.size.width)
+                //.environmentObject(viewModel)
+                .padding(.horizontal, 25)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Image(systemName: "chevron.left")
+                            .font(.custom("Poppins-Bold", size: 25))
+                            .onTapGesture {
+                                dismiss()
+                            }
+                    }
+                }
+                .frame(minHeight: geometry.size.height)
             }
+            .navigationBarBackButtonHidden()
+            .scrollDisabled(true)
+            .frame(width: geometry.size.width)
         }
     }
     
@@ -52,13 +46,20 @@ struct EnterOTP: View {
             .padding(.bottom, 11)
             
             HStack {
-                Text("Sorry, but we only allow authentic users")
+                Text("Enter your OTP sent to 9172 XXXX XX, we only allow authentic users")
                     .font(.custom("Poppins-Medium", size: 18))
                 Spacer()
             }
             .padding(.bottom, 100)
             
-            OTOHolderView()
+            //OTOHolderView()
+            optField()
+                .padding(.bottom, 73)
+            
+            Text("Resend OTP")
+                .font(.custom("Poppins-Medium", size: 18))
+            
+            //Text(viewModel.otp)
         }
     }
     
@@ -76,129 +77,90 @@ struct EnterOTP: View {
                 }
                 .shadow(radius: 5, y: 5)
         }
+        //.disabled(!isValidOtp(code: viewModel.otpField))
+    }
+    
+    @ViewBuilder
+    private func optField() -> some View {
+        ZStack {
+            HStack {
+                otpBubble(with: otpString.count >= 1 ? String(otpString[0]) : "")
+                otpBubble(with: otpString.count >= 2 ? String(otpString[1]) : "")
+                otpBubble(with: otpString.count >= 3 ? String(otpString[2]) : "")
+                otpBubble(with: otpString.count >= 4 ? String(otpString[3]) : "")
+                otpBubble(with: otpString.count >= 5 ? String(otpString[4]) : "")
+                otpBubble(with: otpString.count >= 6 ? String(otpString[5]) : "")
+            }
+            
+            TextField("", text: $otpString)
+                .font(.custom("Poppins-light", size: 0))
+                .foregroundColor(Color(hex: "90FFB6"))
+                .frame(height: 60)
+                .opacity(0.1)
+                .tint(.clear)
+                .onReceive(otpString.publisher.collect()) {
+                    let s = String($0.prefix(characterLimit))
+                    if otpString != s {
+                        otpString = s
+                    }
+                }
+        }
+    }
+    
+    @ViewBuilder
+    private func otpBubble(with text: String) -> some View {
+        Circle()
+            .foregroundColor(Color(hex: "90FFB6"))
+            .frame(width: 56, height: 56)
+            .overlay {
+                Circle()
+                    .stroke(lineWidth: 2)
+                    .foregroundColor(Color(hex: "20DC60"))
+                    .overlay {
+                        Text(text)
+                            .font(.custom("Poppins-Medium", size: 21))
+                    }
+            }
     }
 }
 
 struct EnterOTP_Previews: PreviewProvider {
     static var previews: some View {
-        EnterOTP()
+        NavigationStack {
+            EnterOTP()
+        }
     }
 }
 
-struct OTOHolderView: View {
-    
-    @StateObject var viewModel = ViewModel()
-    @State var isFocused = false
-    
-    let textBoxWidth = UIScreen.main.bounds.width / 8
-    let textBoxHeight = UIScreen.main.bounds.width / 8
-    let spaceBetweenBoxes: CGFloat = 10
-    let paddingOfBox: CGFloat = 1
-    var textFieldOriginalWidth: CGFloat {
-        (textBoxWidth*6)+(spaceBetweenBoxes*3)+((paddingOfBox*2)*3)
-    }
-    
-    var body: some View {
-        
-        VStack {
-            
-            ZStack {
-                
-                HStack (spacing: spaceBetweenBoxes){
-                    
-                    otpText(text: viewModel.otp1)
-                    otpText(text: viewModel.otp2)
-                    otpText(text: viewModel.otp3)
-                    otpText(text: viewModel.otp4)
-                    otpText(text: viewModel.otp5)
-                    otpText(text: viewModel.otp6)
-                }
-                
-                
-                TextField("", text: $viewModel.otpField)
-                    .frame(width: isFocused ? 0 : textFieldOriginalWidth, height: textBoxHeight)
-                    .disabled(viewModel.isTextFieldDisabled)
-                    .textContentType(.oneTimeCode)
-                    .foregroundColor(.clear)
-                    .accentColor(.clear)
-                    .background(Color.clear)
-                    .keyboardType(.numberPad)
-            }
-        }
-    }
-    
-    private func otpText(text: String) -> some View {
-        
-        return Circle()
-            .foregroundColor(Color.blue)
-            .overlay {
-                Circle()
-                    .stroke(lineWidth: 2)
-                    .foregroundColor(Color.red)
-            }
-            .overlay(alignment: .center) {
-                Text(text)
-                    .font(.custom("Poppins-Medium", size: 21))
-            }
-            .frame(width: 55, height: 55)
+extension StringProtocol {
+    subscript(offset: Int) -> Character {
+        self[index(startIndex, offsetBy: offset)]
     }
 }
 
-class ViewModel: ObservableObject {
-    
-    @Published var otpField = "" {
-        didSet {
-            guard otpField.count <= 6,
-                  otpField.last?.isNumber ?? true else {
-                otpField = oldValue
-                return
-            }
+extension Color {
+    init(hex: String) {
+        let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
+        var int: UInt64 = 0
+        Scanner(string: hex).scanHexInt64(&int)
+        let a, r, g, b: UInt64
+        switch hex.count {
+        case 3: // RGB (12-bit)
+            (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
+        case 6: // RGB (24-bit)
+            (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
+        case 8: // ARGB (32-bit)
+            (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
+        default:
+            (a, r, g, b) = (1, 1, 1, 0)
         }
-    }
-    var otp1: String {
-        guard otpField.count >= 1 else {
-            return ""
-        }
-        return String(Array(otpField)[0])
-    }
-    var otp2: String {
-        guard otpField.count >= 2 else {
-            return ""
-        }
-        return String(Array(otpField)[1])
-    }
-    var otp3: String {
-        guard otpField.count >= 3 else {
-            return ""
-        }
-        return String(Array(otpField)[2])
-    }
-    var otp4: String {
-        guard otpField.count >= 4 else {
-            return ""
-        }
-        return String(Array(otpField)[3])
-    }
-    
-    var otp5: String {
-        guard otpField.count >= 5 else {
-            return ""
-        }
-        return String(Array(otpField)[4])
-    }
-    
-    var otp6: String {
-        guard otpField.count >= 6 else {
-            return ""
-        }
-        return String(Array(otpField)[5])
-    }
-    
-    @Published var borderColor: Color = .black
-    @Published var isTextFieldDisabled = false
-    var successCompletionHandler: (()->())?
-    
-    @Published var showResendText = false
-    
-}
 
+        self.init(
+            .sRGB,
+            red: Double(r) / 255,
+            green: Double(g) / 255,
+            blue:  Double(b) / 255,
+            opacity: Double(a) / 255
+        )
+    }
+}

@@ -28,6 +28,7 @@ struct NavigationStack2Bootcamp: View {
     //@State var path: [Book] = []
     //hetrogeneous
     @State var path = NavigationPath()
+    @State var showNewScreen: Bool = false
     
     var body: some View {
         NavigationStack(path: $path) {
@@ -36,6 +37,19 @@ struct NavigationStack2Bootcamp: View {
                 NavigationLink(Book.sample[1].name, value: Book.sample[1].price)
                 NavigationLink(Book.sample[2].name, value: Book.sample[2].coverPage)
                 NavigationLink("Book", value: Book.sample[2])
+                
+                Button {
+                    //perform action and toggle a state property to
+                    //also perform navigation simultaneously.
+                    showNewScreen = true
+                    
+                } label: {
+                    Image(systemName: "heart.fill")
+                        .resizable()
+                        .frame(width: 50, height: 50)
+                        .foregroundColor(.pink)
+                }
+
                 
             }
             .buttonStyle(.borderedProminent)
@@ -57,6 +71,9 @@ struct NavigationStack2Bootcamp: View {
                     Text(book.name)
                         .font(.largeTitle)
                 }
+            }
+            .navigationDestination(isPresented: $showNewScreen) {
+                Text("showing second screen")
             }
         }
     }
