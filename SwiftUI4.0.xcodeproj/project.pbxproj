@@ -14,9 +14,12 @@
 		026BD18229322EF900664821 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 026BD18129322EF900664821 /* Assets.xcassets */; };
 		026BD18529322EF900664821 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 026BD18429322EF900664821 /* Preview Assets.xcassets */; };
 		026BD18C29322F2A00664821 /* Charts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026BD18B29322F2A00664821 /* Charts.swift */; };
+		02B439B1295C493C00739FDF /* AudioBookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B439B0295C493C00739FDF /* AudioBookModel.swift */; };
+		02B439B3295C4BDF00739FDF /* AudioBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B439B2295C4BDF00739FDF /* AudioBookView.swift */; };
 		02BBCEC7293A425700AECE0D /* NavigationStackBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBCEC6293A425700AECE0D /* NavigationStackBootcamp.swift */; };
 		02BF3BCE293DE24600C506DB /* otp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BF3BCD293DE24600C506DB /* otp.swift */; };
 		02CF3CF92954CD4D006E93EA /* NavigationStackBootcamp4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CF3CF82954CD4D006E93EA /* NavigationStackBootcamp4.swift */; };
+		02CF3CFB2954D576006E93EA /* NvaigationStackBootcamp5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CF3CFA2954D576006E93EA /* NvaigationStackBootcamp5.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,9 +31,12 @@
 		026BD18129322EF900664821 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		026BD18429322EF900664821 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		026BD18B29322F2A00664821 /* Charts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Charts.swift; sourceTree = "<group>"; };
+		02B439B0295C493C00739FDF /* AudioBookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioBookModel.swift; sourceTree = "<group>"; };
+		02B439B2295C4BDF00739FDF /* AudioBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioBookView.swift; sourceTree = "<group>"; };
 		02BBCEC6293A425700AECE0D /* NavigationStackBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackBootcamp.swift; sourceTree = "<group>"; };
 		02BF3BCD293DE24600C506DB /* otp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = otp.swift; sourceTree = "<group>"; };
 		02CF3CF82954CD4D006E93EA /* NavigationStackBootcamp4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackBootcamp4.swift; sourceTree = "<group>"; };
+		02CF3CFA2954D576006E93EA /* NvaigationStackBootcamp5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NvaigationStackBootcamp5.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,10 +73,8 @@
 				026BD17F29322EF700664821 /* ContentView.swift */,
 				02BF3BCD293DE24600C506DB /* otp.swift */,
 				026BD18B29322F2A00664821 /* Charts.swift */,
-				02BBCEC6293A425700AECE0D /* NavigationStackBootcamp.swift */,
-				02104D04293F0DD30027BDEF /* NavigationStack2Bootcamp.swift */,
-				02104D06293F17370027BDEF /* NavigationStackBootcamp3.swift */,
-				02CF3CF82954CD4D006E93EA /* NavigationStackBootcamp4.swift */,
+				029AC37D2955793C00E7F83F /* NetworkingUsingConcurrency */,
+				029AC37B2955790700E7F83F /* NavigationStack */,
 				026BD18129322EF900664821 /* Assets.xcassets */,
 				026BD18329322EF900664821 /* Preview Content */,
 			);
@@ -83,6 +87,27 @@
 				026BD18429322EF900664821 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		029AC37B2955790700E7F83F /* NavigationStack */ = {
+			isa = PBXGroup;
+			children = (
+				02BBCEC6293A425700AECE0D /* NavigationStackBootcamp.swift */,
+				02104D04293F0DD30027BDEF /* NavigationStack2Bootcamp.swift */,
+				02104D06293F17370027BDEF /* NavigationStackBootcamp3.swift */,
+				02CF3CF82954CD4D006E93EA /* NavigationStackBootcamp4.swift */,
+				02CF3CFA2954D576006E93EA /* NvaigationStackBootcamp5.swift */,
+			);
+			path = NavigationStack;
+			sourceTree = "<group>";
+		};
+		029AC37D2955793C00E7F83F /* NetworkingUsingConcurrency */ = {
+			isa = PBXGroup;
+			children = (
+				02B439B0295C493C00739FDF /* AudioBookModel.swift */,
+				02B439B2295C4BDF00739FDF /* AudioBookView.swift */,
+			);
+			path = NetworkingUsingConcurrency;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,8 +180,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02B439B3295C4BDF00739FDF /* AudioBookView.swift in Sources */,
 				02CF3CF92954CD4D006E93EA /* NavigationStackBootcamp4.swift in Sources */,
+				02CF3CFB2954D576006E93EA /* NvaigationStackBootcamp5.swift in Sources */,
 				026BD18C29322F2A00664821 /* Charts.swift in Sources */,
+				02B439B1295C493C00739FDF /* AudioBookModel.swift in Sources */,
 				02BF3BCE293DE24600C506DB /* otp.swift in Sources */,
 				02104D05293F0DD30027BDEF /* NavigationStack2Bootcamp.swift in Sources */,
 				026BD18029322EF700664821 /* ContentView.swift in Sources */,
